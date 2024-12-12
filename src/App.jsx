@@ -16,11 +16,24 @@ export default function App() {
    
     const loaded = () => {
         return (
-            <div className="App">
-                {starships.map((starship) => (
-                    <StarshipCard starship={starship} />
-                ))}
-            </div>
+          <div className="App"style={{
+            backgroundColor: 'white',
+            color: 'black',
+            padding: '20px',
+            borderRadius: '5px',
+            textAlign: 'center'
+        }}>
+             <h1>STAR WARS STARSHIPS</h1>
+             <div className="starShipDivs" >
+              {starships.map((starship) => (
+              <StarshipCard 
+                  key={starship.name} 
+                  starship={starship} 
+              />
+          ))}
+             </div>
+          
+      </div>
         )
     }
 
